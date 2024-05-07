@@ -221,21 +221,6 @@ extension UIView {
     }
 }
 
-public protocol Constraintify {
-    func setConstraints(
-        _ constraints: (() -> [NSLayoutConstraint])?
-    )
-}
-
-extension UIView: Constraintify {
-    public func setConstraints(
-        _ constraints: (() -> [NSLayoutConstraint])? = nil
-    ) {
-        guard let constraints = constraints?() else { return }
-        NSLayoutConstraint.activate(constraints)
-    }
-}
-
 public extension UIView {
     
     enum ConstraintRelation {
