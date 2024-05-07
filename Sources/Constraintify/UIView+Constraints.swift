@@ -222,13 +222,13 @@ extension UIView {
 }
 
 public protocol Constraintify {
-    func constraint(
+    func setConstraints(
         _ constraints: (() -> [NSLayoutConstraint])?
     )
 }
 
 extension UIView: Constraintify {
-    public func constraint(
+    public func setConstraints(
         _ constraints: (() -> [NSLayoutConstraint])? = nil
     ) {
         guard let constraints = constraints?() else { return }
