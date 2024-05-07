@@ -23,7 +23,7 @@ let label = UILabel()
 // Skip the `translatesAutoresizingMaskIntoConstraints` for any new view.
 // `anchor` function returns `[NSLayoutConstraint]` for any addtional manipulation if needed.
 NSLayoutConstraint.activate(
-    userIdlabel.anchor(
+    label.anchor(
         leading: view.leadingAnchor,
         top: view.topAnchor,
         trailing: view.trailingAnchor,
